@@ -16,6 +16,7 @@
         app:pb_progressSize="25dp"
         app:pb_loaderTint="@color/colorAccent"
         app:pb_text="@string/test"
+        app:pb_fontFamily="@font/quicksand_bold"
         app:pb_textColor="@android:color/white"
         app:pb_textSize="14sp" />
 

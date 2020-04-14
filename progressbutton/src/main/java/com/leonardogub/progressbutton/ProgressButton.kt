@@ -2,6 +2,7 @@ package com.leonardogub.progressbutton
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.content.res.Resources
 import android.graphics.Color
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -62,7 +63,11 @@ class ProgressButton : FrameLayout {
         //Button font family
         if (taPb.hasValue(R.styleable.ProgressButton_pb_fontFamily)) {
             val fontFamily = taPb.getResourceId(R.styleable.ProgressButton_pb_fontFamily, -1)
-            button.typeface = ResourcesCompat.getFont(context, fontFamily)
+            if(isInEditMode) {
+                button.typeface = resources.getFont(fontFamily)
+            } else {
+                button.typeface = ResourcesCompat.getFont(context, fontFamily)
+            }
         }
 
         //Button text color
