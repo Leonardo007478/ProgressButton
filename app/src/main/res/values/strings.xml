@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ProgressButtonSample</string>
+    <string name="test">Press me!</string>
+</resources>
